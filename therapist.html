@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Counsel</title>
+    <link rel="stylesheet" href="campus.css" />
+  </head>
+
+  <body>
+    <!-- 
+      
+      Navigation Bar 
+    
+    -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./Assets/3.png" alt="Logo" />
+      </div>
+      <div class="nav-links">
+        <div class="nav-item-dropdown">
+          <a href="home.html">Home</a>
+          <div class="dropdown-content">
+            <a href="home.html#art">Art</a>
+            <a href="home.html#faq">FAQ</a>
+            <a href="home.html#blogs">Blog</a>
+          </div>
+        </div>
+        <div class="nav-item-dropdown">
+          <a href="">Resources</a>
+          <div class="dropdown-content">
+            <a href="articles.html">Articles</a>
+            <a href="tools.html">Self-Assessment</a>
+          </div>
+        </div>
+        <div class="nav-item-dropdown">
+          <a href="">Therapy</a>
+          <div class="dropdown-content">
+            <a href="therapist.html">Ask a Therapist</a>
+            <a href="hybrid.html">Hybrid Options</a>
+          </div>
+        </div>
+        <a href="support-groups.html">Support Groups</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="contact-btn">
+        <a href="contactus.html">Contact Us</a>
+      </div>
+    </nav>
+
+    <!-- 
+      
+      Hero-2 section
+    
+    -->
+    <section class="hero-section-2">
+      <div class="container">
+        <div class="hero-text">
+          <div class="accent-line"></div>
+          <div class="text-content">
+            <h1>Ask a Therapist</h1>
+            <p>Reach out to Therapists in your area.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      
+      Chatbot Section 
+    
+    -->
+    <div class="chat-container">
+      <div class="chatbot-Label">Ai Therapist</div>
+      <h2 class="chatbot-heading">
+        Come Chat with our State of the art Ai Therapist.
+      </h2>
+      <div class="messages" id="messages"></div>
+      <input
+        type="text"
+        id="messageInput"
+        placeholder="Type your message here..."
+      />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <!--
+        
+        Art Gallery Section 
+      
+      -->
+    <section class="art-gallery-preview" id="art">
+      <div class="gallery-label">Therapists</div>
+      <h2 class="gallery-heading">
+        Find Therapists in your local area or online.
+      </h2>
+
+      <!--Art Gallery Images -->
+      <div class="gallery-images">
+        <!-- Image-1 -->
+        <div class="image-card">
+          <img src="./assets/Hospital-1.jpeg" alt="hospital 1" />
+          <div class="image-details">
+            <h3>Psychiatry and Therapy</h3>
+            <p>We're Here To Care For Your Needs</p>
+            <a href="https://psychiatryandtherapy.ae/" class="see-more-button"
+              >See More</a
+            >
+          </div>
+        </div>
+
+        <!-- Image-2 -->
+        <div class="image-card">
+          <img src="./assets/Hospital-2.jpg" alt="hospital 2" />
+          <div class="image-details">
+            <h3>Camali Clinic</h3>
+            <p>Complete care for a whole you</p>
+            <a href="https://camaliclinic.com/" class="see-more-button"
+              >See More</a
+            >
+          </div>
+        </div>
+
+        <!-- Image-3 -->
+        <div class="image-card">
+          <img src="./Assets/Hospital-3.png" alt="hospital 3" />
+          <div class="image-details">
+            <h3>Life Works</h3>
+            <p>Compassionate Healthcare</p>
+            <a href="https://lifeworks.ae/" class="see-more-button">See More</a>
+          </div>
+        </div>
+
+        <!-- Image-4 -->
+        <div class="image-card">
+          <img src="./assets/Hospital-4.jpg" alt="hospital 4" />
+          <div class="image-details">
+            <h3>Hamsa Dubai</h3>
+            <p>No worries anymore... We're here to help</p>
+            <a href="https://hamsadubai.com/" class="see-more-button"
+              >See More</a
+            >
+          </div>
+        </div>
+
+        <!-- Image-5 -->
+        <div class="image-card">
+          <img src="./assets/Hospital-5.jpg" alt="hospital 5" />
+          <div class="image-details">
+            <h3>PsychSpace</h3>
+            <p>Therapy in Dubai</p>
+            <a href="https://www.psychspace.ae/" class="see-more-button"
+              >See More</a
+            >
+          </div>
+        </div>
+
+        <!-- Image-6 -->
+        <div class="image-card">
+          <img src="./assets/Hospital-6.jpg" alt="hospital 6" />
+          <div class="image-details">
+            <h3>ATIC</h3>
+            <p>Every child is a Super Hero</p>
+            <a href="https://atic-me.com/" class="see-more-button">See More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      
+      Maps section
+    
+    -->
+    <section class="maps-section">
+      <h2 class="maps-heading">Find Therapist Near You</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d102676.49940174751!2d55.284481734927155!3d25.23571487940162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stherapy%20clinics%20around%20me!5e0!3m2!1sen!2sae!4v1714572356910!5m2!1sen!2sae"
+        width="100%"
+        height="400"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+
+      <h2 class="maps-heading">Breaking the Stigma Mental Health Counseling</h2>
+      <div class="maps-label">
+        Use the maps above to find Events, Therapists and clinics around you!
+      </div>
+    </section>
+
+    <!-- 
+      
+      Newsletter section
+    
+    -->
+    <section class="newsletter-section">
+      <div class="newsletter-overlay">
+        <img
+          src="./assets/newsletter.png"
+          alt="Newsletter Banner"
+          class="newsletter-image"
+        />
+        <div class="newsletter-text">
+          <h2 class="newsletter-heading">Join Our Newsletter</h2>
+          <p class="newsletter-description">
+            To get the latest updates and improvements to our website, join our
+            newsletter.
+          </p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              class="newsletter-input"
+            />
+            <button type="submit" class="subscribe-button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      
+      Testimonials section
+    
+    -->
+    <section class="testimonials-section">
+      <div class="testimonials-text">
+        <p class="small-heading">Testimonials</p>
+        <h2>Healing Words Testimonials from a Mental Health Consultant</h2>
+      </div>
+      <div class="testimonials-container">
+        <!-- Card-1 -->
+        <div class="testimonial-card">
+          <div class="thumbnail">
+            <img src="./Assets/suneel.jpg" alt="" />
+          </div>
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              "I've learned to manage my anxiety with effective strategies here,
+              greatly improving my quality of life."
+            </p>
+            <p class="testimonial-name">Ahmed - Client</p>
+          </div>
+        </div>
+
+        <!-- Card-2 -->
+        <div class="testimonial-card">
+          <div class="thumbnail">
+            <img src="./Assets/emma.jpg" alt="" />
+          </div>
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              "Thanks to empathetic care, I've reclaimed joy and manage my
+              depression much better."
+            </p>
+            <p class="testimonial-name">Urooj - Client</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      
+      Footer
+    
+    -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="logo-container">
+          <img src="./assets/4.png" alt="Logo" class="footer-logo" />
+          <p class="placeholder-text">
+            Your Trusted Partner for Mental Health Support
+          </p>
+        </div>
+        <div class="contact-info">
+          <h3 class="contact-heading">Helplines</h3>
+          <ul>
+            <li>Psychotherapy</li>
+            <li>Mental Counselling</li>
+            <li>Support Groups</li>
+            <li>Case Management</li>
+          </ul>
+        </div>
+        <div class="contact-info">
+          <h3 class="contact-heading">Contact</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> +1 301-615-7787</li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:campus.counsel@gmail.com"
+                >campus.counsel@gmail.com</a
+              >
+            </li>
+            <li><i class="fas fa-map-marker-alt"></i> Bathspa, RAK</li>
+          </ul>
+        </div>
+        <div class="links">
+          <h3 class="links-heading">Links</h3>
+          <ul>
+            <li>Privacy Policy</li>
+            <li>Terms of Use</li>
+          </ul>
+        </div>
+        <div class="maps">
+          <h3 class="maps-heading">Maps</h3>
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d102676.49940174751!2d55.284481734927155!3d25.23571487940162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stherapy%20clinics%20around%20me!5e0!3m2!1sen!2sae!4v1714572356910!5m2!1sen!2sae"
+              width="150"
+              height="100"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="footer-separator"></div>
+      <div class="social-media-links">
+        <a href="https://www.instagram.com/campus.counsel/" class="social-link"
+          ><img
+            width="30"
+            height="30"
+            src="https://img.icons8.com/ios-filled/100/ffffff/instagram-new--v1.png"
+            alt="instagram-new--v1"
+        /></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61557976771661"
+          class="social-link"
+          ><img
+            width="30"
+            height="30"
+            src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+            alt="facebook-new"
+        /></a>
+
+        <a
+          href="https://www.tiktok.com/@campus.counsel?is_from_webapp=1&sender_device=pc"
+          class="social-link"
+          ><img
+            width="30"
+            height="30"
+            src="https://img.icons8.com/ios-filled/100/FFFFFF/tiktok--v1.png"
+            alt="tiktok"
+        /></a>
+        <p>Copyright 2024 @campus.counsel all rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- 
+      
+      Scripts section
+    
+    -->
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      chat-icon="https:&#x2F;&#x2F;www.dropbox.com&#x2F;scl&#x2F;fi&#x2F;lmv9of5fbts9a7hcf34r1&#x2F;CYRA.png?rlkey=39yly2k2p28jnmn4q6zjkh6n7&ampst=k8kg9j7q&ampdl=0"
+      intent="WELCOME"
+      chat-title="Cyra"
+      agent-id="55b2edad-92f0-4eef-9c53-2245c8befd20"
+      language-code="en"
+    ></df-messenger>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
+
+<!--End Code-->

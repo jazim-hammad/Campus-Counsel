@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Counsel</title>
+    <link rel="stylesheet" href="campus.css" />
+  </head>
+
+  <body>
+    <!-- 
+      
+      Navigation Bar 
+    
+    -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./Assets/3.png" alt="Logo" />
+      </div>
+      <div class="nav-links">
+        <div class="nav-item-dropdown">
+          <a href="home.html">Home</a>
+          <div class="dropdown-content">
+            <a href="home.html#art">Art</a>
+            <a href="home.html#faq">FAQ</a>
+            <a href="home.html#blogs">Blog</a>
+          </div>
+        </div>
+        <div class="nav-item-dropdown">
+          <a href="">Resources</a>
+          <div class="dropdown-content">
+            <a href="articles.html">Articles</a>
+            <a href="tools.html">Self-Assessment</a>
+          </div>
+        </div>
+        <div class="nav-item-dropdown">
+          <a href="">Therapy</a>
+          <div class="dropdown-content">
+            <a href="therapist.html">Ask a Therapist</a>
+            <a href="hybrid.html">Hybrid Options</a>
+          </div>
+        </div>
+        <a href="support-groups.html">Support Groups</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="contact-btn">
+        <a href="contactus.html">Contact Us</a>
+      </div>
+    </nav>
+
+    <!-- 
+      
+      Hero section
+    
+    -->
+    <section class="hero-section-2">
+      <div class="container">
+        <div class="hero-text">
+          <div class="accent-line"></div>
+          <div class="text-content">
+            <h1>Contact us</h1>
+            <p>Reach out to us for any inquiries</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      
+      contact section
+    
+    -->
+    <div class="contact-section">
+      <div class="contact-details">
+        <h2>Contact Us Today for Personalized Support and Assistance</h2>
+        <p>
+          We are here for your support 24/7. reach out to us for support,
+          inquiries and suggestions!
+        </p>
+        <ul>
+          <li>
+            <img
+              width="20"
+              height="20"
+              src="https://img.icons8.com/ios/50/1A1A1A/phone--v1.png"
+              alt="phone--v1"
+            />055-454-4545
+          </li>
+          <li>
+            <img
+              width="20"
+              height="20"
+              src="https://img.icons8.com/ios/50/1A1A1A/mail.png"
+              alt="mail"
+            />
+            <a href="mailto:campus.counsel@gmail.com"
+              >campus.counsel@gmail.com</a
+            >
+          </li>
+          <li>
+            <img
+              width="20"
+              height="20"
+              src="https://img.icons8.com/ios/50/1A1A1A/marker--v1.png"
+              alt="marker--v1"
+            />
+            Bathspa, RAK
+          </li>
+        </ul>
+      </div>
+
+      <!--Form -->
+
+      <div class="contact-form">
+        <form action="#" method="post" name="submit-to-google-sheet">
+          <div class="form-group">
+            <div class="name-group">
+              <h4>First Name</h4>
+              <input
+                id="first"
+                type="text"
+                name="first_name"
+                placeholder="Your First Name"
+                required
+              />
+            </div>
+            <div class="name-group">
+              <h4>Last Name</h4>
+              <input
+                id="last"
+                type="text"
+                name="last_name"
+                placeholder="Your Last Name"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="email-phone-group">
+              <h4>Email</h4>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="email@domain.com"
+                required
+              />
+            </div>
+            <div class="email-phone-group">
+              <h4>Phone</h4>
+              <input
+                id="phone"
+                type="tel"
+                name="phone"
+                placeholder="+971* *** ****"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <h4>Message</h4>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" onclick="sendMessage()">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- 
+      
+      maps section
+    
+    -->
+    <section class="maps-section">
+      <div class="maps-label">Maps</div>
+      <h2 class="maps-heading">Use The Map Below To Find Out Our Location!</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.8817538472094!2d55.898467774197606!3d25.741423677364654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef67451f56ae4d7%3A0x9338a5c333829d48!2sBath%20Spa%20University!5e0!3m2!1sen!2sae!4v1714834542777!5m2!1sen!2sae"
+        width="100%"
+        height="400"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <!-- 
+      
+      Footer
+    
+    -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="logo-container">
+          <img src="./assets/4.png" alt="Logo" class="footer-logo" />
+          <p class="placeholder-text">
+            Your Trusted Partner for Mental Health Support
+          </p>
+        </div>
+        <div class="contact-info">
+          <h3 class="contact-heading">Helplines</h3>
+          <ul>
+            <li>Psychotherapy</li>
+            <li>Mental Counselling</li>
+            <li>Support Groups</li>
+            <li>Case Management</li>
+          </ul>
+        </div>
+        <div class="contact-info">
+          <h3 class="contact-heading">Contact</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> +1 301-615-7787</li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:campus.counsel@gmail.com"
+                >campus.counsel@gmail.com</a
+              >
+            </li>
+            <li><i class="fas fa-map-marker-alt"></i> Bathspa, RAK</li>
+          </ul>
+        </div>
+        <div class="links">
+          <h3 class="links-heading">Links</h3>
+          <ul>
+            <li>Privacy Policy</li>
+            <li>Terms of Use</li>
+          </ul>
+        </div>
+        <div class="maps">
+          <h3 class="maps-heading">Maps</h3>
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d102676.49940174751!2d55.284481734927155!3d25.23571487940162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stherapy%20clinics%20around%20me!5e0!3m2!1sen!2sae!4v1714572356910!5m2!1sen!2sae"
+              width="150"
+              height="100"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="footer-separator"></div>
+      <div class="social-media-links">
+        <a href="https://www.instagram.com/campus.counsel/" class="social-link"
+          ><img
+            width="30"
+            height="30"
+            src="https://img.icons8.com/ios-filled/100/ffffff/instagram-new--v1.png"
+            alt="instagram-new--v1"
+        /></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61557976771661"
+          class="social-link"
+          ><img
+            width="30"
+            height="30"
+            src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+            alt="facebook-new"
+        /></a>
+
+        <a
+          href="https://www.tiktok.com/@campus.counsel?is_from_webapp=1&sender_device=pc"
+          class="social-link"
+          ><img
+            width="30"
+            height="30"
+            src="https://img.icons8.com/ios-filled/100/FFFFFF/tiktok--v1.png"
+            alt="tiktok"
+        /></a>
+        <p>Copyright 2024 @campus.counsel all rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- 
+      
+      Scripts section
+    
+    -->
+    <script src="contact.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwRezV4SwSb6CLdSH6LSebFuC3kPJ_FpXWF6jy24MLr0sPT8STvoMYaQgm6ishpBS4/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("XalD9hjeT-TMCJKD4");
+      })();
+    </script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      chat-icon="https:&#x2F;&#x2F;www.dropbox.com&#x2F;scl&#x2F;fi&#x2F;lmv9of5fbts9a7hcf34r1&#x2F;CYRA.png?rlkey=39yly2k2p28jnmn4q6zjkh6n7&ampst=k8kg9j7q&ampdl=0"
+      intent="WELCOME"
+      chat-title="Cyra"
+      agent-id="55b2edad-92f0-4eef-9c53-2245c8befd20"
+      language-code="en"
+    ></df-messenger>
+  </body>
+</html>
+
+<!--End Code-->
