@@ -1763,30 +1763,44 @@ services end
 cyra start
  */
 .introducing-cyra {
-  background: url("./assets/Cyra-bg.png") no-repeat center center fixed;
+  background: url("./Assets/Cyra-bg.png") no-repeat center center;
   background-size: cover;
   display: flex;
-  padding: 50px;
-  color: white;
+  justify-content: flex-end;
   align-items: center;
+  color: white;
+  padding: 50px;
+  margin-block: 20%;
+  height: 50vh;
 
-  img {
-    max-width: 50%;
-    border-radius: 10px;
+  .cyra-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 
   .description {
-    padding-left: 20px;
+    max-width: 60%; // Limit the width of the text
+    margin-left: 50px; // Space between text and image
 
     h1 {
-      color: $accent-color;
+      font-size: 2rem;
+      margin-bottom: 20px; // Space below the heading
     }
+
     p {
-      color: $bg-color;
+      font-size: 0.85rem; // Standard font size for paragraph
+      line-height: 1.5; // Line height for readability
     }
+  }
+
+  img {
+    max-width: 40%; // Set the Cyra image width
+    height: auto; // Maintain aspect ratio
+    border-radius: 20px; // Rounded corners for the image
   }
 }
 
 /* 
-cyra start
+cyra end
  */

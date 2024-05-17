@@ -1565,27 +1565,39 @@ services end
 cyra start
  */
 .introducing-cyra {
-  background: url("./assets/Cyra-bg.png") no-repeat center center fixed;
+  background: url("./Assets/Cyra-bg.png") no-repeat center center;
   background-size: cover;
   display: flex;
-  padding: 50px;
-  color: white;
+  justify-content: flex-end;
   align-items: center;
+  color: white;
+  padding: 50px;
+  margin-block: 20%;
+  height: 50vh;
 }
-.introducing-cyra img {
-  max-width: 50%;
-  border-radius: 10px;
+.introducing-cyra .cyra-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 .introducing-cyra .description {
-  padding-left: 20px;
+  max-width: 60%;
+  margin-left: 50px;
 }
 .introducing-cyra .description h1 {
-  color: #ef3b39;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 .introducing-cyra .description p {
-  color: #fcf8f4;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.introducing-cyra img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 20px;
 }
 
 /* 
-cyra start
+cyra end
  *//*# sourceMappingURL=campus.css.map */
