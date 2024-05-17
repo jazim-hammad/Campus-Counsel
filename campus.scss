@@ -1780,27 +1780,26 @@ cyra start
   }
 
   .description {
-    max-width: 60%; // Limit the width of the text
-    margin-left: 50px; // Space between text and image
+    max-width: 60%;
+    margin-left: 50px;
 
     h1 {
       font-size: 2rem;
-      margin-bottom: 20px; // Space below the heading
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 0.85rem; // Standard font size for paragraph
-      line-height: 1.5; // Line height for readability
+      font-size: 0.85rem;
+      line-height: 1.5;
     }
   }
 
   img {
-    max-width: 40%; // Set the Cyra image width
-    height: auto; // Maintain aspect ratio
-    border-radius: 20px; // Rounded corners for the image
+    max-width: 40%;
+    height: auto;
+    border-radius: 20px;
   }
 }
-
 /* 
 cyra end
  */
