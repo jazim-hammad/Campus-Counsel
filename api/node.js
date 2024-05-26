@@ -3,14 +3,12 @@ const cors = require("cors");
 const OpenAI = require("openai");
 
 const app = express();
-const port = 3004;
-
 app.use(express.json());
 app.use(cors());
 
 // Initialize the OpenAI API with your API key
 const openai = new OpenAI({
-  apiKey: "sk-proj-ZLcWuQDxjTKhbbM00UleT3BlbkFJNFlGyS2gjUBlIIsWerNC",
+  apiKey: "your-openai-api-key",
 });
 
 app.post("/chat", async (req, res) => {
