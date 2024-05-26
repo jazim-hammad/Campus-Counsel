@@ -24,10 +24,7 @@ app.post("/chat", async (req, res) => {
       temperature: 0.7,
     });
 
-    console.log(chatCompletion);
-
     const botResponse = chatCompletion.choices[0].message.content;
-
     res.json({ response: botResponse });
   } catch (error) {
     console.error("Error:", error);
@@ -35,6 +32,4 @@ app.post("/chat", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
+module.exports = app;
