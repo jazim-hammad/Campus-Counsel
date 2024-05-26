@@ -3,12 +3,14 @@ const cors = require("cors");
 const OpenAI = require("openai");
 
 const app = express();
+const port = 3004;
+
 app.use(express.json());
 app.use(cors());
 
 // Initialize the OpenAI API with your API key
 const openai = new OpenAI({
-  apiKey: "your-openai-api-key",
+  apiKey: "sk-proj-ZLcWuQDxjTKhbbM00UleT3BlbkFJNFlGyS2gjUBlIIsWerNC",
 });
 
 app.post("/chat", async (req, res) => {
@@ -22,7 +24,10 @@ app.post("/chat", async (req, res) => {
       temperature: 0.7,
     });
 
+    console.log(chatCompletion);
+
     const botResponse = chatCompletion.choices[0].message.content;
+
     res.json({ response: botResponse });
   } catch (error) {
     console.error("Error:", error);
@@ -30,4 +35,6 @@ app.post("/chat", async (req, res) => {
   }
 });
 
-module.exports = app;
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
