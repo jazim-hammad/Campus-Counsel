@@ -3,7 +3,7 @@ async function sendMessage() {
   const message = input.value;
   input.value = "";
 
-  const response = await fetch("/api/chat", {
+  const response = await fetch("http://localhost:3004/chat", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
