@@ -6,9 +6,7 @@ Importing the fonts
 /* 
 Defining color Variables 
 */
-/* 
-Global styles 
-*/
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -23,33 +21,48 @@ body {
   line-height: normal;
 }
 
-/* 
-Navigation bar styles Start
-*/
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0px;
+  justify-content: center;
   position: sticky;
   top: 0;
   z-index: 1000;
   background: linear-gradient(180deg, rgba(252, 248, 244, 0.8) 60%, rgba(252, 248, 244, 0.6) 70%, rgba(252, 248, 244, 0.4) 80%, rgba(252, 248, 244, 0.2) 90%, rgba(252, 248, 244, 0) 100%);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
-  width: 97vw;
+  width: 100%;
+  /* Contact button */
 }
 .navbar .logo img {
   height: 80px;
-  margin-left: 10%;
+  cursor: pointer;
+}
+.navbar .menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+.navbar .menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ef3b39;
+  margin: 3px auto;
+  transition: all 0.3s ease-in-out;
 }
 .navbar .nav-links {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 30px;
+  margin-left: 10%;
 }
 .navbar .nav-links a {
   color: #ef3b39;
   text-decoration: none;
+  transition: color 0.3s;
+}
+.navbar .nav-links a:hover {
+  color: #e31512;
 }
 .navbar .nav-item-dropdown {
   position: relative;
@@ -58,40 +71,43 @@ Navigation bar styles Start
   display: none;
   position: absolute;
   top: 100%;
-  left: -64px;
-  background-color: transparent;
+  left: 0;
+  background-color: #fecec4;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   width: 190px;
   z-index: 1;
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
-.navbar .nav-item-dropdown:hover .dropdown-content {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
 .navbar .nav-item-dropdown .dropdown-content a {
-  color: #ef3b39;
-  background-color: rgba(254, 206, 196, 0.4);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-  padding: 10px 10px;
-  text-decoration: none;
+  color: #b3100f;
+  padding: 10px;
   display: block;
-  text-align: center;
-  font-size: 18px;
-  transition: background-color 0.3s, color 0.3s;
-  position: relative;
+  text-align: left;
+  text-decoration: none;
 }
 .navbar .nav-item-dropdown .dropdown-content a:hover {
-  background-color: rgba(239, 59, 57, 0.4);
+  background-color: rgba(239, 59, 57, 0.1);
 }
-
-/* 
-Contact button 
-*/
-.contact-btn a {
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background: linear-gradient(180deg, rgba(252, 248, 244, 0.8) 60%, rgba(252, 248, 244, 0.6) 70%, rgba(252, 248, 244, 0.4) 80%, rgba(252, 248, 244, 0.2) 90%, rgba(252, 248, 244, 0) 100%);
+  }
+  .navbar .nav-links .nav-item-dropdown,
+  .navbar .nav-links .contact-btn {
+    width: 100%;
+  }
+}
+.navbar .contact-btn a {
   border-radius: 30px;
   background-color: #fecec4;
   padding: 15px 35px;
@@ -105,17 +121,11 @@ Contact button
   border: none;
   text-decoration: none;
 }
-.contact-btn a:hover {
+.navbar .contact-btn a:hover {
   background-color: rgba(239, 59, 57, 0.1);
   color: #f36a68;
-  text-decoration: none;
 }
 
-/* 
-
-Navigation bar styles end
-
-*/
 /* 
 
 Hero section Start
@@ -826,85 +836,45 @@ FAQ start
 /* 
 FAQ end
 */
-/* 
-Footer start
-*/
-.footer {
-  background: linear-gradient(270deg, #ff7170 0%, #ff9492 100%);
-  padding: 40px 0;
-  color: white;
-}
-.footer .footer-container {
-  display: flex;
-  margin-inline: 2%;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.footer .footer-container .footer-logo {
-  height: 80px;
-}
-.footer .footer-container .placeholder-text {
-  color: white;
-  margin-left: 10%;
-}
-.footer .footer-container .logo-container,
-.footer .footer-container .contact-info,
-.footer .footer-container .links,
-.footer .footer-container .maps {
-  flex: 1;
-  margin-inline: 2%;
-}
-.footer .footer-container .logo-container,
-.footer .footer-container .contact-heading,
-.footer .footer-container .links-heading,
-.footer .footer-container .maps-heading {
-  font-size: 1rem;
-  margin-bottom: 15px;
-}
-.footer .footer-container ul {
-  list-style: none;
-  padding: 0;
-  font-size: 0.75rem;
-}
-.footer .footer-container ul li {
-  margin-bottom: 5px;
-}
-.footer .footer-container ul li a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
-}
-.footer .footer-container ul li a:hover {
-  color: #fecec4;
-}
-.footer .social-media-links {
+/* Privacy Policy Section Styles */
+.privacy-policy-section {
   text-align: center;
-  margin-top: 10px;
+  padding: 20px;
+  margin-inline: 5%;
+  font-weight: 400;
 }
-.footer .social-media-links .social-link img {
-  transition: transform 0.3s ease;
+.privacy-policy-section .privacy-label,
+.privacy-policy-section .privacy-heading {
+  text-align: left;
+  margin-bottom: 10px;
 }
-.footer .social-media-links .social-link img:hover {
-  filter: saturate(10) contrast(10);
-  transform: scale(1.2);
+.privacy-policy-section .privacy-label {
+  font-size: 0.9rem;
 }
-.footer .social-media-links p {
-  color: #ffffff;
-  margin: 10px;
-  text-decoration: none;
-  font-size: 0.75rem;
+.privacy-policy-section .privacy-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
-.footer .footer-separator {
-  height: 2px;
-  border-radius: 2px;
-  width: 90%;
-  margin: 10px auto;
-  background-color: #fcf8f4;
+@media (min-width: 768px) {
+  .privacy-policy-section {
+    padding: 40px 0;
+    margin-inline: 10%;
+  }
+  .privacy-policy-section .privacy-label {
+    font-size: 0.75rem;
+  }
+  .privacy-policy-section .privacy-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .privacy-policy-section {
+    padding: 60px 0;
+  }
 }
 
-/* 
-Footer end
-*/
 /* 
 Team banner start
 */
@@ -1602,4 +1572,83 @@ cyra start
 
 /* 
 cyra end
- *//*# sourceMappingURL=campus.css.map */
+ */
+/* 
+Footer start
+*/
+.footer {
+  background: linear-gradient(270deg, #ff7170 0%, #ff9492 100%);
+  padding: 40px 0;
+  color: white;
+}
+.footer .footer-container {
+  display: flex;
+  margin-inline: 2%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer .footer-container .footer-logo {
+  height: 80px;
+}
+.footer .footer-container .placeholder-text {
+  color: white;
+  margin-left: 10%;
+}
+.footer .footer-container .logo-container,
+.footer .footer-container .contact-info,
+.footer .footer-container .links,
+.footer .footer-container .maps {
+  flex: 1;
+  margin-inline: 2%;
+}
+.footer .footer-container .logo-container,
+.footer .footer-container .contact-heading,
+.footer .footer-container .links-heading,
+.footer .footer-container .maps-heading {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.footer .footer-container ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.75rem;
+}
+.footer .footer-container ul li {
+  margin-bottom: 5px;
+}
+.footer .footer-container ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+.footer .footer-container ul li a:hover {
+  color: #fecec4;
+}
+.footer .social-media-links {
+  text-align: center;
+  margin-top: 10px;
+}
+.footer .social-media-links .social-link img {
+  transition: transform 0.3s ease;
+}
+.footer .social-media-links .social-link img:hover {
+  filter: saturate(10) contrast(10);
+  transform: scale(1.2);
+}
+.footer .social-media-links p {
+  color: #ffffff;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+.footer .footer-separator {
+  height: 2px;
+  border-radius: 2px;
+  width: 90%;
+  margin: 10px auto;
+  background-color: #fcf8f4;
+}
+
+/* 
+Footer end
+*//*# sourceMappingURL=campus.css.map */

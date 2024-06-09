@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Campus Counsel</title>
     <link rel="stylesheet" href="campus.css" />
+    <link rel="icon" type="image/png" href="./Assets/1.png" />
   </head>
 
   <body>
-    <!-- 
-      
-      Navigation Bar 
-    
-    -->
     <nav class="navbar">
       <div class="logo">
         <img src="./Assets/3.png" alt="Logo" />
+      </div>
+      <!-- Hamburger menu for small screens -->
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
       <div class="nav-links">
         <div class="nav-item-dropdown">
@@ -44,9 +46,10 @@
         <a href="support-groups.html">Support Groups</a>
         <a href="events.html">Events</a>
         <a href="about.html">About</a>
-      </div>
-      <div class="contact-btn">
-        <a href="contactus.html">Contact Us</a>
+        <!-- Moved Contact Button inside nav-links -->
+        <div class="contact-btn">
+          <a href="contactus.html">Contact Us</a>
+        </div>
       </div>
     </nav>
 
@@ -232,7 +235,7 @@
         <div class="links">
           <h3 class="links-heading">Links</h3>
           <ul>
-            <li>Privacy Policy</li>
+            <li><a href="Privacy.html">Privacy Policy</a></li>
             <li>Terms of Use</li>
           </ul>
         </div>
@@ -289,6 +292,7 @@
     
     -->
     <script src="contact.js"></script>
+    <script src="nav.js"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"

@@ -19,9 +19,7 @@ $navbar-gradient: linear-gradient(
   rgba(252, 248, 244, 0) 100%
 );
 
-/* 
-Global styles 
-*/
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -36,33 +34,49 @@ body {
   line-height: normal;
 }
 
-/* 
-Navigation bar styles Start
-*/
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0px;
+  justify-content: center;
   position: sticky;
   top: 0;
   z-index: 1000;
   background: $navbar-gradient;
   backdrop-filter: blur(2px);
-  width: 97vw;
+  width: 100%;
 
   .logo img {
     height: 80px;
-    margin-left: 10%;
+    cursor: pointer;
+  }
+
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: $accent-color;
+      margin: 3px auto;
+      transition: all 0.3s ease-in-out;
+    }
   }
 
   .nav-links {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 30px;
+    margin-left: 10%;
 
     a {
       color: $accent-color;
       text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: darken($accent-color, 10%); // Make sure darken function works
+      }
     }
   }
 
@@ -73,72 +87,72 @@ Navigation bar styles Start
       display: none;
       position: absolute;
       top: 100%;
-      left: -64px;
-      background-color: transparent;
+      left: 0;
+      background-color: $bg-color-2;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
       width: 190px;
       z-index: 1;
       transition: opacity 0.7s ease, transform 0.7s ease;
-    }
 
-    &:hover .dropdown-content {
+      a {
+        color: darken($accent-color, 20%);
+        padding: 10px;
+        display: block;
+        text-align: left;
+        text-decoration: none;
+
+        &:hover {
+          background-color: rgba($accent-color, 0.1);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
       display: block;
-      opacity: 1;
-      transform: translateY(0);
     }
 
-    .dropdown-content a {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      background: $navbar-gradient;
+
+      .nav-item-dropdown,
+      .contact-btn {
+        width: 100%;
+      }
+    }
+  }
+
+  /* Contact button */
+  .contact-btn {
+    a {
+      border-radius: 30px;
+      background-color: $bg-color-2;
+      padding: 15px 35px;
+      display: flex;
+      align-items: center;
       color: $accent-color;
-      background-color: rgba($bg-color-2, 0.4);
-      backdrop-filter: blur(2px);
-      padding: 10px 10px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      line-height: normal;
+      cursor: pointer;
+      border: none;
       text-decoration: none;
-      display: block;
-      text-align: center;
-      font-size: 18px;
-      transition: background-color 0.3s, color 0.3s;
-      position: relative;
-    }
 
-    .dropdown-content a:hover {
-      background-color: rgba($accent-color, 0.4);
+      &:hover {
+        background-color: rgba($accent-color, 0.1);
+        color: lighten($accent-color, 10%);
+      }
     }
   }
 }
-
-/* 
-Contact button 
-*/
-.contact-btn {
-  a {
-    border-radius: 30px;
-    background-color: $bg-color-2;
-    padding: 15px 35px;
-    display: flex;
-    align-items: center;
-    color: $accent-color;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    line-height: normal;
-    cursor: pointer;
-    border: none;
-    text-decoration: none;
-
-    &:hover {
-      background-color: rgba($accent-color, 0.1);
-      color: lighten($accent-color, 10%);
-      text-decoration: none;
-    }
-  }
-}
-
-/* 
-
-Navigation bar styles end
-
-*/
-
 /* 
 
 Hero section Start
@@ -944,92 +958,48 @@ FAQ start
 FAQ end
 */
 
-/* 
-Footer start
-*/
-.footer {
-  background: linear-gradient(270deg, #ff7170 0%, #ff9492 100%);
-  padding: 40px 0;
-  color: white;
+/* Privacy Policy Section Styles */
+.privacy-policy-section {
+  text-align: center;
+  padding: 20px;
+  margin-inline: 5%;
+  font-weight: 400;
 
-  .footer-container {
-    display: flex;
-    margin-inline: 2%;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    .footer-logo {
-      height: 80px;
-    }
-
-    .placeholder-text {
-      color: white;
-      margin-left: 10%;
-    }
-
-    .logo-container,
-    .contact-info,
-    .links,
-    .maps {
-      flex: 1;
-      margin-inline: 2%;
-    }
-
-    .logo-container,
-    .contact-heading,
-    .links-heading,
-    .maps-heading {
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      font-size: 0.75rem;
-
-      li {
-        margin-bottom: 5px;
-        a {
-          text-decoration: none;
-          color: white;
-          transition: color 0.3s ease;
-          &:hover {
-            color: $bg-color-2;
-          }
-        }
-      }
-    }
+  .privacy-label,
+  .privacy-heading {
+    text-align: left;
+    margin-bottom: 10px;
   }
-  .social-media-links {
-    text-align: center;
-    margin-top: 10px;
-    .social-link img {
-      transition: transform 0.3s ease;
-      &:hover {
-        filter: saturate(10) contrast(10);
-        transform: scale(1.2);
-      }
-    }
-    p {
-      color: #ffffff;
-      margin: 10px;
-      text-decoration: none;
+
+  .privacy-label {
+    font-size: 0.9rem; // Larger font size for better readability on small screens
+  }
+
+  .privacy-heading {
+    font-size: 1.5rem; // Slightly smaller to fit on smaller screens
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  // Responsive Design Adjustments
+  @media (min-width: 768px) {
+    padding: 40px 0;
+    margin-inline: 10%;
+
+    .privacy-label {
       font-size: 0.75rem;
     }
+
+    .privacy-heading {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
   }
-  .footer-separator {
-    height: 2px;
-    border-radius: 2px;
-    width: 90%;
-    margin: 10px auto;
-    background-color: $bg-color;
+
+  @media (min-width: 992px) {
+    padding: 60px 0;
   }
 }
-
-/* 
-Footer end
-*/
 
 /* 
 Team banner start
@@ -1805,3 +1775,90 @@ cyra start
 /* 
 cyra end
  */
+
+/* 
+Footer start
+*/
+.footer {
+  background: linear-gradient(270deg, #ff7170 0%, #ff9492 100%);
+  padding: 40px 0;
+  color: white;
+
+  .footer-container {
+    display: flex;
+    margin-inline: 2%;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .footer-logo {
+      height: 80px;
+    }
+
+    .placeholder-text {
+      color: white;
+      margin-left: 10%;
+    }
+
+    .logo-container,
+    .contact-info,
+    .links,
+    .maps {
+      flex: 1;
+      margin-inline: 2%;
+    }
+
+    .logo-container,
+    .contact-heading,
+    .links-heading,
+    .maps-heading {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 0.75rem;
+
+      li {
+        margin-bottom: 5px;
+        a {
+          text-decoration: none;
+          color: white;
+          transition: color 0.3s ease;
+          &:hover {
+            color: $bg-color-2;
+          }
+        }
+      }
+    }
+  }
+  .social-media-links {
+    text-align: center;
+    margin-top: 10px;
+    .social-link img {
+      transition: transform 0.3s ease;
+      &:hover {
+        filter: saturate(10) contrast(10);
+        transform: scale(1.2);
+      }
+    }
+    p {
+      color: #ffffff;
+      margin: 10px;
+      text-decoration: none;
+      font-size: 0.75rem;
+    }
+  }
+  .footer-separator {
+    height: 2px;
+    border-radius: 2px;
+    width: 90%;
+    margin: 10px auto;
+    background-color: $bg-color;
+  }
+}
+
+/* 
+Footer end
+*/
